@@ -75,7 +75,7 @@ class TicketGenerationThread extends Thread{
     }
 }
 
-public class Assignement2 {
+public class Assignment2 {
     public static void main(String[] args) throws InterruptedException {
 
         TicketBookingThread tickbook = new TicketBookingThread();
