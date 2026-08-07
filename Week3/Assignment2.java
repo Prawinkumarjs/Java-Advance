@@ -6,6 +6,7 @@ class Customer{
     private String customerId;
     private String customerName;
     private String phoneNumber;
+
     public void displayCustomer(){
 
     }
@@ -18,6 +19,7 @@ class Account {
     int accountno;
     String accounttype;
     double balance;
+
     public void deposit(){
 
     }
@@ -33,6 +35,7 @@ class Loan{
     int loanid;
     float interestrate;
     double loanamount;
+
     public void calculateEMI(){
 
     }
@@ -45,6 +48,7 @@ class Transaction{
     int transactionid;
     String transactiontype;
     double amount;
+
     public void debit(){
 
     }
@@ -90,7 +94,7 @@ public class Assignment2 {
         System.out.println("Fields Names: ");
         System.out.println();
         Field[] acfields = ac.getDeclaredFields();
-        for(Field acfield : cusfields){
+        for(Field acfield : acfields){
             System.out.println(acfield.getName());
         }
         System.out.println();
