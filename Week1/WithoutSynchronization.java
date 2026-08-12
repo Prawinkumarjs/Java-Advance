@@ -23,9 +23,9 @@ class EmployeeSalary{
     }
 } 
 
-class PayrollThread_RC extends Thread{
+class PayrollThread_RCD extends Thread{
     EmployeeSalary employees;
-    PayrollThread_RC(EmployeeSalary employees){
+    PayrollThread_RCD(EmployeeSalary employees){
         this.employees = employees;
 
     }
@@ -35,9 +35,9 @@ class PayrollThread_RC extends Thread{
     }
 }
 
-class AttendanceThread_RC extends Thread{
+class AttendanceThread_RCD extends Thread{
     EmployeeSalary employees;
-    AttendanceThread_RC(EmployeeSalary employees){
+    AttendanceThread_RCD(EmployeeSalary employees){
         this.employees = employees;
 
     }
@@ -47,9 +47,9 @@ class AttendanceThread_RC extends Thread{
     }
 }
 
-class FinanceThread_RC extends Thread{
+class FinanceThread_RCD extends Thread{
     EmployeeSalary employees;
-    FinanceThread_RC(EmployeeSalary employees){
+    FinanceThread_RCD(EmployeeSalary employees){
         this.employees = employees;
 
     }
@@ -64,9 +64,9 @@ class FinanceThread_RC extends Thread{
 public class WithoutSynchronization {
     public static void main(String[] args) throws InterruptedException {
         EmployeeSalary employees = new EmployeeSalary(1001,"Raj",50000);
-        PayrollThread_RC payroll  = new PayrollThread_RC(employees);
-        AttendanceThread_RC attendance = new AttendanceThread_RC(employees);
-        FinanceThread_RC finance = new FinanceThread_RC(employees);
+        PayrollThread_RCD payroll  = new PayrollThread_RCD(employees);
+        AttendanceThread_RCD attendance = new AttendanceThread_RCD(employees);
+        FinanceThread_RCD finance = new FinanceThread_RCD(employees);
 
         payroll.start();
         attendance.start();
