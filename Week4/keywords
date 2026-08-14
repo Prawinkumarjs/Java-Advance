@@ -1,0 +1,44 @@
+This slide is explaining *Java Socket Programming* in very simple one-line meanings.
+
+### Easy explanation
+
+| Term                  | Meaning                                          |
+| --------------------- | ------------------------------------------------ |
+| **ServerSocket**      | Creates the server and waits for clients         |
+| **Socket**            | Creates the connection between client and server |
+| **accept()**          | Waits until a client connects                    |
+| **getInputStream()**  | Receives data from the client                    |
+| **getOutputStream()** | Sends data to the client                         |
+| **BufferedReader**    | Reads text/data efficiently                      |
+| **readLine()**        | Reads one complete line                          |
+| **PrintWriter**       | Sends text/data                                  |
+| **println()**         | Sends one line of text                           |
+| **localhost**         | Your own computer                                |
+| **5000**              | Port number used for communication               |
+| **socket.close()**    | Closes the connection                            |
+
+### Remember the flow
+
+**Server side:**
+
+`ServerSocket → accept() → Socket → Input/Output Stream → Communication → close()`
+
+**Client side:**
+
+`Socket → connect to Server → Input/Output Stream → Communication → close()`
+
+For example:
+
+```text
+Client                         Server
+  |                              |
+  | ---- "Hello" -------------> |
+  |                              |
+  | <---- "Hi Client" ---------- |
+  |                              |
+  | -------- close() ----------> |
+```
+
+So, in one sentence:
+
+> **ServerSocket waits for clients, Socket creates the connection, InputStream receives data, OutputStream sends data, and close() ends the connection.**
