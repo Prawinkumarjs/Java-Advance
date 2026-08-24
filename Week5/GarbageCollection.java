@@ -1,4 +1,3 @@
-package Week5;
 class EmployeeHRMSJVM{
     private String empid;
     private String empname;
